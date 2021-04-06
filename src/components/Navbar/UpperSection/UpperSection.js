@@ -9,13 +9,13 @@ const UpperSection = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles._leftSide}>
-        <img src={region.flag} alt="flag" className={styles._flag} />
+      <div className={styles.leftSide}>
+        <img src={region.flag} alt="flag" className={styles.flag} />
         <p>{region.lang}</p>
       </div>
 
-      <div className={styles._rightSide}>
-        <div className={styles._icons}>
+      <div className={styles.rightSide}>
+        <div className={styles.icons}>
           {menuIcons.map((icon) => (
             <i
               className={icon.class}
@@ -24,9 +24,9 @@ const UpperSection = () => {
             ></i>
           ))}
         </div>
-        <div className={styles._cart}>
+        <div className={styles.cart}>
           <i className={cartIcon.class}></i>
-          <div className={styles._cart__value}>{cartValue}</div>
+          <div className={styles.cart_value}>{cartValue}</div>
         </div>
       </div>
     </div>

@@ -1,7 +1,10 @@
 @import "../../sass/variables.scss";
 
 .container {
-  margin: 0 17.7rem;
+  margin: auto;
+  width: 80.5vw;
   // height: 10.5rem;
   background-color: $page-section-background;
+
+  font-family: "Noto Sans", sans-serif;
 }

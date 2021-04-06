@@ -2,62 +2,72 @@
 
 .container {
   height: 6.8rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Noto sans", sans-serif;
+  box-shadow: 0 5px 3px -3px rgba(grey, 0.3);
+}
 
-  ._leftSide {
-    height: 100%;
-    display: flex;
-    // justify-content: center;
-    align-items: center;
+.leftSide {
+  height: 100%;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 0 1.5rem;
+  height: 230%;
+  width: auto;
+  object-fit: contain;
+}
+
+.menuButtonList {
+  width: 100%;
+  height: 100%;
+  margin-left: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 2vw;
+}
+
+.menuButton {
+  // RESET
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  outline: none;
+
+  font-family: "Noto Sans";
+  font-size: 1.65rem;
+  font-weight: 600;
+  font-stretch: semi-expanded;
+  color: $dark-text;
+  background-color: $page-section-background;
+
+  &:hover {
+    cursor: pointer;
   }
 
-  ._logo {
-    margin: 0 1.5rem;
-    // text-align: start;
-    width: auto;
-    // display:
-    object-fit: contain;
-    height: 180%;
+  &__active {
+    border-bottom: 3px solid $primary-color;
+    margin-bottom: -3px;
+    color: $primary-color;
+  }
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+
+  p {
+    padding: 1rem;
   }
 
-  ._menuButtons {
-    margin-left: 2rem;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 4rem;
-  }
-
-  ._menuButton,
-  ._menuButton:link,
-  ._menuButton:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    font-size: 1.65rem;
-    font-weight: 600;
-    color: $dark-text;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  ._rightSide {
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-    font-size: 1.5rem;
-
-    p {
-      padding: 1rem;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
   }
 }
