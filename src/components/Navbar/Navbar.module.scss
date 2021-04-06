@@ -1,8 +1,7 @@
-.Navbar {
+@import "../../sass/variables.scss";
+
+.container {
   margin: 0 17.7rem;
   // height: 10.5rem;
-  background-color: #f4f4f4;
-
-  font-family: "Noto Sans";
-  font-size: 1rem;
+  background-color: $page-section-background;
 }

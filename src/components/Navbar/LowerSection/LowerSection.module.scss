@@ -1,25 +1,63 @@
-.LowerSection {
-  height: 6.8rem;
+@import "../../../sass/variables.scss";
 
-  &_leftSide {
+.container {
+  height: 6.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Noto sans", sans-serif;
+
+  ._leftSide {
     height: 100%;
     display: flex;
     // justify-content: center;
     align-items: center;
   }
 
-  &_logo {
+  ._logo {
     margin: 0 1.5rem;
     // text-align: start;
     width: auto;
     // display:
     object-fit: contain;
-    height: 170%;
+    height: 180%;
   }
 
-  &_menuItems {
+  ._menuButtons {
+    margin-left: 2rem;
     display: grid;
     grid-template-columns: repeat(5, auto);
-    grid-gap: 1.5rem;
+    grid-gap: 4rem;
+  }
+
+  ._menuButton,
+  ._menuButton:link,
+  ._menuButton:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: $dark-text;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  ._rightSide {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+
+    p {
+      padding: 1rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

@@ -1,18 +1,21 @@
 @import "../../../sass/variables.scss";
 
-.UpperSection {
-  font-size: 1.4rem;
+.container {
   // border: thin solid blue;
   // padding: 1rem 0;
   height: 3.4rem;
   background-color: $dark-text;
+
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: white;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  &_leftSide {
+  ._leftSide {
     // border: chartreuse solid thin;
     height: 100%;
     width: fit-content;
@@ -24,28 +27,38 @@
     // font-size: 16px;
   }
 
-  &_flag {
+  ._flag {
     width: 2.2rem;
     margin-right: 1rem;
   }
 
-  &_rightSide {
+  ._rightSide {
     display: flex;
     align-items: center;
   }
 
-  &_icons {
+  ._icons {
     font-size: 1.6rem;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 1.5rem;
   }
 
-  &_cart {
+  ._cart {
+    display: flex;
+    align-items: center;
     height: 3.4rem;
     margin-left: 1.5rem;
-    padding: 0.5rem 1.2rem;
+    padding: 0 1.2rem;
     background-color: $primary-color;
     letter-spacing: 0.1rem;
+
+    &__value {
+      margin-left: 0.5rem;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
   }
 }

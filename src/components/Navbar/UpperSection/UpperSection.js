@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./UpperSection.module.scss";
-import { menuIcons } from "../utils/menuIcons";
+import { menuIcons, cartIcon } from "../utils/menuIcons";
 import flag from "../utils/flag.png";
 
 const UpperSection = () => {
@@ -8,24 +8,25 @@ const UpperSection = () => {
   const [region, setRegion] = useState({ flag: flag, lang: "EN" });
 
   return (
-    <div className={styles.UpperSection}>
-      <div className={styles.UpperSection_leftSide}>
-        <img
-          src={region.flag}
-          alt="flag"
-          className={styles.UpperSection_flag}
-        />
+    <div className={styles.container}>
+      <div className={styles._leftSide}>
+        <img src={region.flag} alt="flag" className={styles._flag} />
         <p>{region.lang}</p>
       </div>
 
-      <div className={styles.UpperSection_rightSide}>
-        <div className={styles.UpperSection_icons}>
+      <div className={styles._rightSide}>
+        <div className={styles._icons}>
           {menuIcons.map((icon) => (
-            <i className={icon.class} key={icon.class}></i>
+            <i
+              className={icon.class}
+              key={icon.class}
+              style={{ cursor: "pointer" }}
+            ></i>
           ))}
         </div>
-        <div className={styles.UpperSection_cart}>
-          <i className="fas fa-shopping-cart"> {" " + cartValue}</i>
+        <div className={styles._cart}>
+          <i className={cartIcon.class}></i>
+          <div className={styles._cart__value}>{cartValue}</div>
         </div>
       </div>
     </div>

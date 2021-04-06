@@ -3,7 +3,7 @@ import UpperSection from "./UpperSection/UpperSection";
 import LowerSection from "./LowerSection/LowerSection";
 
 const Navbar = () => (
-  <nav className={styles.Navbar}>
+  <nav className={styles.container}>
     <UpperSection />
     <LowerSection />
   </nav>
