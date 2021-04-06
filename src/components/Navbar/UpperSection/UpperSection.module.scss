@@ -1,0 +1,51 @@
+@import "../../../sass/variables.scss";
+
+.UpperSection {
+  font-size: 1.4rem;
+  // border: thin solid blue;
+  // padding: 1rem 0;
+  height: 3.4rem;
+  background-color: $dark-text;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_leftSide {
+    // border: chartreuse solid thin;
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.5rem;
+    // justify-self: start;
+    // font-size: 16px;
+  }
+
+  &_flag {
+    width: 2.2rem;
+    margin-right: 1rem;
+  }
+
+  &_rightSide {
+    display: flex;
+    align-items: center;
+  }
+
+  &_icons {
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1.5rem;
+  }
+
+  &_cart {
+    height: 3.4rem;
+    margin-left: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    background-color: $primary-color;
+    letter-spacing: 0.1rem;
+  }
+}

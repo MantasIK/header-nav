@@ -1,0 +1,25 @@
+.LowerSection {
+  height: 6.8rem;
+
+  &_leftSide {
+    height: 100%;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+  }
+
+  &_logo {
+    margin: 0 1.5rem;
+    // text-align: start;
+    width: auto;
+    // display:
+    object-fit: contain;
+    height: 170%;
+  }
+
+  &_menuItems {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 1.5rem;
+  }
+}
