@@ -1,4 +1,4 @@
-export const menuItems = {
+export const dropdownItems = {
   solutions: [
     "Solutions By Industry",
     "Solutions By Process",

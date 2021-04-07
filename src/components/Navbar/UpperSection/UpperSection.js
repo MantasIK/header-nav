@@ -1,11 +1,12 @@
 import { useState } from "react";
 import styles from "./UpperSection.module.scss";
-import { menuIcons, cartIcon } from "../utils/menuIcons";
+import { menuIconsArray } from "../utils/menuIcons";
 import flag from "../utils/flag.png";
 
+import Cart from "../Cart/Cart";
+
 const UpperSection = () => {
-  const [cartValue, setCartValue] = useState(3);
-  const [region, setRegion] = useState({ flag: flag, lang: "EN" });
+  const [region] = useState({ flag: flag, lang: "EN" });
 
   return (
     <div className={styles.container}>
@@ -16,18 +17,11 @@ const UpperSection = () => {
 
       <div className={styles.rightSide}>
         <div className={styles.icons}>
-          {menuIcons.map((icon) => (
-            <i
-              className={icon.class}
-              key={icon.class}
-              style={{ cursor: "pointer" }}
-            ></i>
+          {menuIconsArray.map((icon) => (
+            <i className={`${icon.class} icon`} key={icon.class}></i>
           ))}
         </div>
-        <div className={styles.cart}>
-          <i className={cartIcon.class}></i>
-          <div className={styles.cart_value}>{cartValue}</div>
-        </div>
+        <Cart customStyles={styles} />
       </div>
     </div>
   );

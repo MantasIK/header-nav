@@ -1,4 +1,4 @@
-@import "../../../sass/variables.scss";
+@import "../../../../sass/variables.scss";
 
 .container {
   font-size: 1.6rem;
@@ -6,7 +6,7 @@
   color: $dark-text;
 
   ul {
-    padding: 3rem;
+    padding: 3rem 3.5rem;
     list-style: none;
   }
 

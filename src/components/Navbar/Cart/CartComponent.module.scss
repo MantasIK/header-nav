@@ -1,0 +1,21 @@
+@import "../../../sass/variables.scss";
+
+.cart {
+  display: flex;
+  align-items: center;
+  height: 3.4rem;
+  margin-left: 1.5rem;
+  padding: 0 1.2rem;
+  background-color: yellow;
+  letter-spacing: 0.1rem;
+
+  &_value {
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// customStyles={styles}
