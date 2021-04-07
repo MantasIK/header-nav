@@ -1,5 +1,7 @@
 @import "../../../sass/variables.scss";
 
+/* Default styles if not provided by parent, not used in this case */
+
 .cartContainer {
   display: flex;
   align-items: center;
@@ -17,5 +19,3 @@
     cursor: pointer;
   }
 }
-
-// customStyles={styles}

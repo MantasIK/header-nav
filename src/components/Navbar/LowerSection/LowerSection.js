@@ -3,10 +3,14 @@ import { useState } from "react";
 import { menuNames } from "../utils/menuData";
 import { menuIcons } from "../utils/menuIcons";
 import { ReactComponent as Logo } from "../utils/logo.svg";
-
 import Cart from "../Cart/Cart";
 import MobileMenuFooter from "./MobileMenuFooter/MobileMenuFooter";
 import Dropdown from "./Dropdown/Dropdown";
+
+/* This component needs refactoring using the react-responsive package. It is too big and too drty.
+  I made the mistake of underestimating the components design logic at first glance and relying too 
+  much on CSS to solve a problem that could've easily been solve in the react layer.
+*/
 
 const LowerSection = () => {
   const [currentDropdown, setCurrentDropdown] = useState(false);
