@@ -1,6 +1,6 @@
 import styles from "./LowerSection.module.scss";
 import { useState } from "react";
-import { menuButtons } from "../utils/menuButtons";
+import { menuNames } from "../utils/menuData";
 import { menuIcons } from "../utils/menuIcons";
 import { ReactComponent as Logo } from "../utils/logo.svg";
 
@@ -20,6 +20,7 @@ const LowerSection = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenu(!mobileMenuActive);
+    setCurrentDropdown(false);
   };
 
   const activeButtonClass = `${styles.menuButton} ${styles.menuButton__active}`;
@@ -40,7 +41,7 @@ const LowerSection = () => {
     : desktopMenuClasses;
 
   return (
-    <div>
+    <>
       <div className={styles.container}>
         <div className={styles.leftSide}>
           <i
@@ -60,18 +61,18 @@ const LowerSection = () => {
                 </div>
               ) : null}
 
-              {menuButtons.map((button) => (
+              {menuNames.map((item) => (
                 <button
                   className={
-                    currentDropdown === button.name
+                    currentDropdown === item.name
                       ? activeButtonClass
                       : regButtonClass
                   }
-                  key={button.name}
-                  value={button.name}
+                  key={item.name}
+                  value={item.name}
                   onClick={openMenu}
                 >
-                  {button.name} <i className={activeMenuClass.rightIcon} />
+                  {item.name} <i className={activeMenuClass.rightIcon} />
                 </button>
               ))}
 
@@ -92,9 +93,10 @@ const LowerSection = () => {
         <Dropdown
           currentMenu={currentDropdown}
           mobile={mobileMenuActive ? true : false}
+          closeDropdown={setCurrentDropdown}
         />
       ) : null}
-    </div>
+    </>
   );
 };
 

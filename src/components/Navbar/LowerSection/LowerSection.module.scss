@@ -37,7 +37,7 @@
   background: black;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #f4f4f4;
+  color: $page-section-background;
 }
 
 .menuButtonList {
@@ -47,7 +47,7 @@
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-gap: 2vw;
-  align-self: center;
+  align-items: center;
 }
 
 .menuButton {
@@ -60,7 +60,7 @@
 
   font-family: "Noto Sans";
   font-size: 1.67rem;
-  font-weight: 600;
+  font-weight: 700;
   font-stretch: semi-expanded;
   color: $dark-text;
 
@@ -90,7 +90,7 @@
   }
 }
 
-.cart,
+.cartContainer,
 .profile {
   display: none;
 }
@@ -125,7 +125,7 @@
     position: absolute;
     top: 0;
     justify-content: flex-start;
-    background: #f4f4f4;
+    background: $page-section-background;
   }
 
   .menuButton {
@@ -139,16 +139,13 @@
     justify-content: space-between;
     font-size: 1.5rem;
     text-align: start;
-    border-bottom: thin solid #d0d0d0;
+    border-bottom: thin solid $borders;
 
     &__active {
-      border-bottom: thin solid #d0d0d0;
+      border-bottom: thin solid $borders;
       margin-bottom: 0px;
       color: $dark-text;
     }
-  }
-
-  .rightIcon__mobile {
   }
 
   .rightSide {
@@ -161,9 +158,12 @@
     &:hover {
       cursor: default;
     }
+    & > p {
+      display: none;
+    }
   }
 
-  .cart {
+  .cartContainer {
     display: flex;
     align-items: center;
     letter-spacing: 0.1rem;
@@ -182,9 +182,5 @@
   .searchIcon {
     display: inline-block;
     padding: 0.5rem;
-  }
-
-  p {
-    display: none;
   }
 }

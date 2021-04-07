@@ -1,17 +1,76 @@
 @import "../../../../sass/variables.scss";
 
 .container {
+  color: $dark-text;
+}
+
+.dropdownList {
+  padding: 2rem 3.5rem;
+  list-style: none;
+}
+
+.dropdownItem {
+  // RESET
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+  border: none;
+  outline: none;
+  background-color: $white-primary;
+
+  display: table;
+  font-family: $primary-font;
+  color: $dark-text;
   font-size: 1.6rem;
   font-weight: 700;
-  color: $dark-text;
+}
 
-  ul {
-    padding: 3rem 3.5rem;
-    list-style: none;
+.arrow {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 3.7rem;
+    background: $page-section-background;
   }
 
-  li {
-    padding: 1rem 1rem;
-    display: table;
+  .dropdownList {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+  }
+
+  .dropdownItem {
+    padding: 1.5rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background: $page-section-background;
+    border-bottom: thin solid $borders;
+
+    &:first-child {
+      background-color: $white-primary;
+      justify-content: flex-start;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .arrow {
+    display: inline-block;
+  }
+
+  .leftArrow {
+    margin-right: 1rem;
   }
 }

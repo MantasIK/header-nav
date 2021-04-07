@@ -1,3 +1,21 @@
+export const menuNames = [
+  {
+    name: "solutions",
+  },
+  {
+    name: "products",
+  },
+  {
+    name: "automation",
+  },
+  {
+    name: "education",
+  },
+  {
+    name: "resources",
+  },
+];
+
 export const dropdownItems = {
   solutions: [
     "Solutions By Industry",

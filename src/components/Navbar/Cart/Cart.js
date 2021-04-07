@@ -8,9 +8,9 @@ const Cart = ({ customStyles }) => {
   const STYLES = customStyles ? customStyles : styles;
 
   return (
-    <div className={STYLES.cart}>
+    <div className={STYLES.cartContainer}>
       <i className={menuIcons.cartIcon}></i>
-      <div className={STYLES.cart_value}>{cartValue}</div>
+      <div className={STYLES.cartContainer_value}>{cartValue}</div>
     </div>
   );
 };
